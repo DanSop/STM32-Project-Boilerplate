@@ -1,0 +1,5 @@
+# Ignore Debug and Release folders in Peltor_CrewTalk_H743
+Build/
+.cache/
+.projectile
+compile_commands.json
