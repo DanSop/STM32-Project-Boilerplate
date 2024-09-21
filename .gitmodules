@@ -1,9 +1,0 @@
-[submodule "Third_Party/stm32h7xx_hal_driver"]
-	path = Third_Party/stm32h7xx_hal_driver
-	url = https://github.com/STMicroelectronics/stm32h7xx_hal_driver.git
-[submodule "Third_Party/cmsis_core"]
-	path = Third_Party/cmsis_core
-	url = https://github.com/STMicroelectronics/cmsis_core.git
-[submodule "Third_Party/cmsis_device_h7"]
-	path = Third_Party/cmsis_device_h7
-	url = https://github.com/STMicroelectronics/cmsis_device_h7.git
