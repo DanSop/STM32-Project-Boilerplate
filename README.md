@@ -4,6 +4,12 @@ This branch contains a simple blinky example for a H743 dev board. The project d
 
 Please read through the makefile as it shows how a different device can be ran via file and macro definitions. The makefile also has an easy way to add global definitions, new libraries, new source or include directories, or adjust the compiler flags as needed.
 
+To update the submodules do:
+
+```
+git submodule update --init --recursive
+```
+
 ## Project Structure
 
 ```
@@ -14,8 +20,10 @@ STM32H7xx-Blinky-Example/
 │   ├── Inc/
 │   │   ├── main.h
 │   │   └── stm32h7xx_hal_conf.h
+│   │   └── stm32h7xx_it.h
 │   └── Src/
 │       ├── main.c
+│       └── stm32h7xx_it.c
 ├── Third_Party/
 │   ├── cmsis_core/
 │   ├── cmsis_device_h7/
