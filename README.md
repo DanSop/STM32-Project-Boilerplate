@@ -84,9 +84,4 @@ Ensure you run `make clean` before switching builds to ensure the object files a
 - Implement unit testing via Ceedling.
 
 ## Note
-
-- Implement unit testing
-
-## Note
-
-This template is a work in progress. 
+- This template is a work in progress. 
