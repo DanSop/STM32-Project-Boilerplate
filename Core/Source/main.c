@@ -86,7 +86,7 @@ int main(void)
 
     while (1)
     {
-      LED_GPIO_Toggle();
+        LED_GPIO_Toggle();
     }
 }
 
