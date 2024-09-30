@@ -22,9 +22,6 @@ extern "C" {
 //******************************************************************************
 #include "stm32h7xx_hal.h"
 
-#define LD1_Pin GPIO_PIN_0
-#define LD1_GPIO_Port GPIOB
-
 #ifdef __cplusplus
 }
 #endif
