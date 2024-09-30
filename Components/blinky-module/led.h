@@ -1,8 +1,8 @@
 /**
  *******************************************************************************
- * @file      main.h
+ * @file      led.h
  * @author    Place your author name here
- * @brief     This is the main header file for the STM32-Project-Boilerplate.
+ * @brief     This is the header file for the leds
  * @copyright Place your copyright here
  *******************************************************************************
  */
@@ -10,8 +10,8 @@
 //******************************************************************************
 // Define to prevent recursive inclusion
 //******************************************************************************
-#ifndef __MAIN_H
-#define __MAIN_H
+#ifndef __LED_H
+#define __LED_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -22,13 +22,23 @@ extern "C" {
 //******************************************************************************
 #include "stm32h7xx_hal.h"
 
+//******************************************************************************
+//  Defines
+//******************************************************************************
 #define LD1_Pin GPIO_PIN_0
 #define LD1_GPIO_Port GPIOB
+#define LED_DELAY 1000UL
+
+ //*****************************************************************************
+//  Include Files
+//******************************************************************************
+extern void LED_GPIO_Init(void);
+extern void LED_GPIO_Toggle(void);
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif // __MAIN_H
+#endif // __LED_H
 
 /*********************************END OF FILE**********************************/

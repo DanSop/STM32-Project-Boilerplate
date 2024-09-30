@@ -1,5 +1,5 @@
 # Project Name
-TARGET = STM32_Project_Boilerplate
+TARGET = STM32H7xx-Blinky-Example
 
 # Device Configuration
 LINKER_SCRIPT_FLASH = STM32H743_FLASH.ld
@@ -24,6 +24,9 @@ DEBUG_CFLAGS = -g -O0
 RELEASE_CFLAGS = -O2
 LDFLAGS = -specs=nosys.specs -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -Wl,--gc-sections
 MAKEFLAGS += -s
+
+# Note: This is to allow a LSP to correctly STD header files, optional
+BASE_CFLAGS += -I/usr/lib/arm-none-eabi/include
 
 # Libraries
 LIB_DIRS = Libraries
@@ -59,6 +62,7 @@ HAL_DRIVER_SRC := $(filter-out Third_Party/stm32h7xx_hal_driver/Src/stm32h7xx_ha
 # Source files
 SRC_C = $(wildcard $(CORE_SRC)/*.c) \
         $(wildcard $(COMPONENTS_SRC)/*.c) \
+        $(wildcard $(COMPONENTS_SRC)/blinky-module/*.c) \
         $(wildcard $(COMMON_SRC)/*.c) \
         $(wildcard $(HAL_DRIVER_SRC)/*.c) \
         $(wildcard $(STARTUP_SRC)/*.s) \
@@ -72,6 +76,7 @@ INCLUDES = -I$(CORE_INC) \
            -I$(CMSIS_DEVICE_INC) \
            -I$(HAL_DRIVER_INC) \
            -I$(COMMON_INC) \
+           -I$(COMPONENTS_INC)/blinky-module \
            -I$(COMPONENTS_INC)
 
 # Object files

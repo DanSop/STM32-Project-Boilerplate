@@ -3,3 +3,8 @@ Build/
 .cache/
 .projectile
 compile_commands.json
+.project
+.cproject
+.settings/
+*.launch
+.clang-format
